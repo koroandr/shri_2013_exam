@@ -1,0 +1,13 @@
+module "sidebar"
+
+match / {
+    <div class="sidebar">
+        for .users.items {
+            <a href="#user_{.id}" class="sidebar__user">
+                <img class="sidebar__photo" src="{.link_photo}"/>
+                <span class="sidebar__name">{.name}</span>
+            </a>
+        }
+        <div style="clear: both"></div>
+    </div>
+}
