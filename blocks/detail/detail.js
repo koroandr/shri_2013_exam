@@ -11,7 +11,8 @@ define([
         }
 
         this.container = $(container);
-        this.container.append($(yr.run("detail", data)));
+        this.body =$(yr.run("detail", data));
+        this.container.append(this.body);
         this.members = data.members;
 
         this.detail = this.container.find(".detail");
@@ -29,6 +30,14 @@ define([
         }
         this.detail.html(yr.run("detail", {data: member}));
     };
+
+    Detail.prototype.show = function() {
+        this.body.show();
+    };
+
+    Detail.prototype.hide = function() {
+        this.body.hide();
+    }
 
     return Detail;
 });

@@ -2,8 +2,16 @@ define(function(){
    return {
        "menu": [
            {
+               "link":"about",
+               "title":"О Школе"
+           },
+           {
             "link":"member",
             "title":"Участники"
+           },
+           {
+               "link":"lecture",
+               "title":"Лекции"
            }
        ],
        "lectures":

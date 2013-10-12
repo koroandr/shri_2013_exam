@@ -27,15 +27,34 @@ define([
             radio("member-selected").broadcast(id);
         });
 
-        Detail(content, data);
+        this.detail = new Detail(content, data);
 
         radio("show-member").subscribe(this.showMember.bind(this));
+        radio("show-about").subscribe(this.showAbout.bind(this));
+        radio("show-lecture").subscribe(this.showLecture.bind(this));
     }
 
     Main.prototype.showMember = function(id) {
+        this.sidebar.show();
+        this.detail.show();
         this.sidebar.selectItem(id);
+
         this.header.showItem("member");
     };
+
+    Main.prototype.showAbout = function() {
+        this.sidebar.hide();
+        this.detail.hide();
+
+        this.header.showItem("about")
+    };
+
+    Main.prototype.showLecture = function(id) {
+        this.sidebar.hide();
+        this.detail.hide();
+
+        this.header.showItem("lecture");
+    }
 
 
     return Main;
