@@ -2,9 +2,9 @@ module "sidebar"
 
 match / {
     <div class="sidebar">
-        for .members.items {
+        for .members {
             <a href="#user_{.id}" class="sidebar__user">
-                <img class="sidebar__photo" src="{.link_photo}"/>
+                <img class="sidebar__photo" src="http://{.link_photo}"/>
                 <span class="sidebar__name">{.name}</span>
             </a>
         }

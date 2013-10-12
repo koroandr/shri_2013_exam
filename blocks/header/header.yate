@@ -2,12 +2,12 @@ module "header"
 
 match / {
     <div class="header">
-                    <ul class="header__menu">
-                        for .items.item {
-                            <li class="header__menu-link">
-                                <a href="{.href}">{.title}</a>
-                            </li>    
-                        }
-                    </ul>
-        </div>
+        <ul class="header__menu">
+            for .items {
+                <li class="header__menu-link">
+                    <a href="{.href}">{.title}</a>
+                </li>
+            }
+        </ul>
+    </div>
 }

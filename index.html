@@ -5,102 +5,110 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="all.css">
+
+    <script type="text/javascript" src="node_modules/yate/lib/runtime.js"></script>
+
+    <script type="text/javascript" src="blocks/detail/detail.yate.js"></script>
+    <script type="text/javascript" src="blocks/header/header.yate.js"></script>
+    <script type="text/javascript" src="blocks/sidebar/sidebar.yate.js"></script>
+
+    <script type="text/javascript" src="require.js" data-main="main"></script>
 </head>
 <body>
-    <div class="main">
-        <div class="main__header">
-            <div class="header">
-                <ul class="header__menu">
-                    <li class="header__menu-link">
-                        <a href="#about">О Школе</a>
-                    </li>
-                    <li class="header__menu-link selected">
-                        <a href="#members">Участники</a>
-                    </li>
-                    <li class="header__menu-link">
-                        <a href="#lectures">Лекции</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="main__content">
-            <div class="sidebar">
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user selected">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
-                <a href="#user_123" class="sidebar__user">
-                    <img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                    <span class="sidebar__name">Никита Попов</span>
-                </a>
+    <!--<div class="main">-->
+        <!--<div class="main__header">-->
+            <!--<div class="header">-->
+                <!--<ul class="header__menu">-->
+                    <!--<li class="header__menu-link">-->
+                        <!--<a href="#about">О Школе</a>-->
+                    <!--</li>-->
+                    <!--<li class="header__menu-link selected">-->
+                        <!--<a href="#members">Участники</a>-->
+                    <!--</li>-->
+                    <!--<li class="header__menu-link">-->
+                        <!--<a href="#lectures">Лекции</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="main__content">-->
+            <!--<div class="sidebar">-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user selected">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
+                <!--<a href="#user_123" class="sidebar__user">-->
+                    <!--<img class="sidebar__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                    <!--<span class="sidebar__name">Никита Попов</span>-->
+                <!--</a>-->
 
 
 
-                <div style="clear: both"></div>
-            </div>
-            <div class="detail">
-                <img class="detail__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>
-                <div class="detail__info">
-                    <span class="detail__name">Никита Попов</span><br/>
-                    <span class="detail__city">Санкт-Петербург</span><br/>
-                    <a class="detail__link-facebook detail__icon" href="http://facebook.com/popov.nikita">f</a>
-                    <a class="detail__link-vk detail__icon" href="http://vk.com/nikita.v.popov">В</a>
-                    <!--<a class="detail__link-github" href="http://github.com/losnikitos">gh</a>-->
-                    <a class="detail__link-yaru detail__icon" href="http://losnikitos123.ya.ru">Я</a>
-                </div>
-                <div style="clear: both"></div>
-                <span class="detail__about">О себе о себе о себе. Очень много о себе
-                О себе о себе о себе. Очень много о себе
-                О себе о себе о себе. Очень много о себе
-                О себе о себе о себе. Очень много о себе
-                О себе о себе о себе. Очень много о себе
-                О себе о себе о себе. Очень много о себе
-                м
-                О себе о себе о себе. Очень много о себе
-                м
-                О себе о себе о себе. Очень много о себе</span>
-            </div>
-        </div>
-    </div>
+                <!--<div style="clear: both"></div>-->
+            <!--</div>-->
+            <!--<div class="detail">-->
+                <!--<img class="detail__photo" src="http://cs408530.vk.me/v408530792/1e45/XISCuQa83W4.jpg"/>-->
+                <!--<div class="detail__info">-->
+                    <!--<span class="detail__name">Никита Попов</span><br/>-->
+                    <!--<span class="detail__city">Санкт-Петербург</span><br/>-->
+                    <!--<a class="detail__link-facebook detail__icon" href="http://facebook.com/popov.nikita">f</a>-->
+                    <!--<a class="detail__link-vk detail__icon" href="http://vk.com/nikita.v.popov">В</a>-->
+                    <!--&lt;!&ndash;<a class="detail__link-github" href="http://github.com/losnikitos">gh</a>&ndash;&gt;-->
+                    <!--<a class="detail__link-yaru detail__icon" href="http://losnikitos123.ya.ru">Я</a>-->
+                <!--</div>-->
+                <!--<div style="clear: both"></div>-->
+                <!--<span class="detail__about">О себе о себе о себе. Очень много о себе-->
+                <!--О себе о себе о себе. Очень много о себе-->
+                <!--О себе о себе о себе. Очень много о себе-->
+                <!--О себе о себе о себе. Очень много о себе-->
+                <!--О себе о себе о себе. Очень много о себе-->
+                <!--О себе о себе о себе. Очень много о себе-->
+                <!--м-->
+                <!--О себе о себе о себе. Очень много о себе-->
+                <!--м-->
+                <!--О себе о себе о себе. Очень много о себе</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 </body>
 </html>
