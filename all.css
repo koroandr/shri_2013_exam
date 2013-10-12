@@ -161,3 +161,8 @@ body {
     display: block;
     margin-top: 20px;
 }
+
+.about {
+    padding: 20px;
+    color: #555;
+}

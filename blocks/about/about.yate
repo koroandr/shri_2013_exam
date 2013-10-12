@@ -1,0 +1,9 @@
+module "about"
+
+match / {
+	<div class="about">
+	for .paragraphs {
+		<p>{.text}</p>
+	}
+	</div>
+}
