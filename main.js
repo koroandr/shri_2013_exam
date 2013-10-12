@@ -6,11 +6,11 @@ require(
         "data",
         "lib/jquery",
         "blocks/main/main",
-        "lib/radio"
+        "lib/radio",
+        "app/router"
     ],
-    function(data, $, Main, radio) {
+    function(data, $, Main, radio, router) {
         Main("body", data);
-
-        radio("show-member").broadcast(1);
+        router.init();
     }
 );

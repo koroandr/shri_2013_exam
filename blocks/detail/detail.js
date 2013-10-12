@@ -22,7 +22,7 @@ define([
     Detail.prototype.showMember = function(member_id) {
         var member;
         for (var i = 0; i < this.members.length; i++) {
-            if (this.members[i].id === member_id) {
+            if (this.members[i].id == member_id) {
                 member = this.members[i];
                 break;
             }
