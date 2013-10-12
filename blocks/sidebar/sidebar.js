@@ -13,16 +13,41 @@ define(
 
             this.container = $(container);
 
-            this.container.append(yr.run("sidebar", data));
+            this.body = $(yr.run("sidebar", data));
 
-            this.sidebar = this.container.find(".sidebar");
+            this.container.append(this.body);
+
+
+            var self = this;
+            this.body.find(".sidebar__item").click(function(){
+                if (self.clickCallback) {
+                    self.clickCallback($(this).data("id"));
+                }
+            });
         }
         Sidebar.prototype.selectItem = function(id) {
-            this.sidebar.find(".selected").removeClass("selected");
-            var selected = this.sidebar.find('[data-id = "' + id + '"]');
+            this.body.find(".selected").removeClass("selected");
+            var selected = this.body.find('[data-id = "' + id + '"]');
             selected.addClass("selected");
 
         };
+
+        Sidebar.prototype.setClickCallback = function(callback) {
+            if (typeof callback != "function") {
+                console.error("Trying to add not a function callback", callback);
+                return;
+            }
+            this.clickCallback = callback;
+        };
+
+        Sidebar.prototype.show = function() {
+            this.body.show();
+        };
+
+        Sidebar.prototype.hide = function() {
+            this.body.hide();
+        }
+
 
         return Sidebar;
 });

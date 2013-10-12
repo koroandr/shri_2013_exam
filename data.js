@@ -2,8 +2,16 @@ define(function(){
    return {
        "menu": [
            {
-            "href":"#ololo",
-            "title":"Test"
+               "link":"about",
+               "title":"О Школе"
+           },
+           {
+            "link":"member",
+            "title":"Участники"
+           },
+           {
+               "link":"lecture",
+               "title":"Лекции"
            }
        ],
        "lectures":
@@ -618,7 +626,7 @@ define(function(){
 
                "Timestamp":"9/28/2013 2:51:14",
 
-               "name":"Никита Попов",
+               "name":"Никита Попов 1",
 
                "city":"Санкт-Петербург",
 
@@ -640,7 +648,7 @@ define(function(){
 
                "Timestamp":"9/28/2013 2:51:14",
 
-               "name":"Никита Попов",
+               "name":"Никита Попов 2",
 
                "city":"Санкт-Петербург",
 
@@ -661,7 +669,7 @@ define(function(){
 
                "Timestamp":"9/28/2013 2:51:14",
 
-               "name":"Никита Попов",
+               "name":"Никита Попов 3",
 
                "city":"Санкт-Петербург",
 

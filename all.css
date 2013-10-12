@@ -39,6 +39,7 @@ body {
 
 .header__menu-link {
     display: inline-block;
+    cursor: pointer;
 }
 
 .header__menu-link a {

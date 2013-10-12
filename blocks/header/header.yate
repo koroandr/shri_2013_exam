@@ -4,8 +4,8 @@ match / {
     <div class="header">
         <ul class="header__menu">
             for .menu {
-                <li class="header__menu-link">
-                    <a href="{.href}">{.title}</a>
+                <li data-link="{.link}" class="header__menu-link">
+                    <a>{.title}</a>
                 </li>
             }
         </ul>
