@@ -3,7 +3,7 @@ module "header"
 match / {
     <div class="header">
         <ul class="header__menu">
-            for .items {
+            for .menu {
                 <li class="header__menu-link">
                     <a href="{.href}">{.title}</a>
                 </li>

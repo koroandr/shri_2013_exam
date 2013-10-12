@@ -8,12 +8,10 @@ define([
         if (!(this instanceof Header)) {
             return new Header(container, data);
         }
-        var menu = {
-            items: data.menu
-        };
+
 
         this.container = $(container);
-        this.container.append($(yr.run("header", menu)));
+        this.container.append($(yr.run("header", data)));
     }
     return Header;
 });

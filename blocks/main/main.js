@@ -18,7 +18,10 @@ define([
         Header(this.container.find(".main__header"), data);
         var content = this.container.find(".main__content");
 
-        Sidebar(content, data);
+        var members = {
+            items: data.members
+        };
+        Sidebar(content, members);
         Detail(content, data);
     }
 
