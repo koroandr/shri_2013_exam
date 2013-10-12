@@ -16,5 +16,6 @@ define(
             this.container.append(yr.run("sidebar", data));
         }
 
+
         return Sidebar;
 });

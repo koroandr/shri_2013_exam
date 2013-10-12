@@ -5,9 +5,12 @@ require(
     [
         "data",
         "lib/jquery",
-        "blocks/main/main"
+        "blocks/main/main",
+        "lib/radio"
     ],
-    function(data, $, Main) {
+    function(data, $, Main, radio) {
         Main("body", data);
+
+        radio("show-member").broadcast(1);
     }
 );
