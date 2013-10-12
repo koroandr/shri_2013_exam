@@ -5,8 +5,9 @@ define([
     "text!blocks/main/main.html",
     "blocks/header/header",
     "blocks/sidebar/sidebar",
-    "blocks/detail/detail"
-], function (html, Header, Sidebar, Detail) {
+    "blocks/detail/detail",
+    "lib/radio"
+], function (html, Header, Sidebar, Detail, radio) {
     function Main(container, data) {
         if (! (this instanceof Main)) {
             return new Main(container, data);
@@ -21,9 +22,15 @@ define([
         var members = {
             items: data.members
         };
-        Sidebar(content, members);
+        this.sidebar = Sidebar(content, members);
         Detail(content, data);
+
+        radio("show-member").subscribe(this.showMember.bind(this));
     }
+
+    Main.prototype.showMember = function(id) {
+        this.sidebar.selectItem(id);
+    };
 
     return Main;
 });

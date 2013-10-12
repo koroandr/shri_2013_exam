@@ -14,8 +14,15 @@ define(
             this.container = $(container);
 
             this.container.append(yr.run("sidebar", data));
-        }
 
+            this.sidebar = this.container.find(".sidebar");
+        }
+        Sidebar.prototype.selectItem = function(id) {
+            this.sidebar.find(".selected").removeClass("selected");
+            var selected = this.sidebar.find('[data-id = "' + id + '"]');
+            selected.addClass("selected");
+
+        };
 
         return Sidebar;
 });

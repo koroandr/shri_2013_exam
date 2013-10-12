@@ -71,18 +71,19 @@ body {
     overflow: scroll;
 }
 
-.sidebar__user {
+.sidebar__item {
     display: block;
     text-decoration: none;
     color: black;
     border-bottom: 1px solid #ddd;
     height: 50px;
+    cursor: pointer;
 }
-.sidebar__user:hover {
+.sidebar__item:hover {
     background: #f9fcfe;
 }
 
-.sidebar__user.selected {
+.sidebar__item.selected {
     background: #9ce;
 }
 
@@ -148,6 +149,7 @@ body {
     text-align: center;
     width: 16px;
     height: 16px;
+    margin-right: 5px;
 }
 
 .detail__icon:hover {
