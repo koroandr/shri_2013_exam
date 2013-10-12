@@ -27,12 +27,12 @@ function (radio) {
     }
 
     radio("member-selected").subscribe(function(member_id){
-        history.pushState(null, null, "#member_" + member_id);
+        history.pushState(null, null, "#member" + (member_id != undefined ? "_" + member_id : ""));
         radio("show-member").broadcast(member_id);
     });
 
     radio("lecture-selected").subscribe(function(lecture_id) {
-        history.pushState(null, null, "#lecture" + lecture_id);
+        history.pushState(null, null, "#lecture" + (lecture_id != undefined ? "_" + lecture_id : ""));
         radio("show-lecture").broadcast(lecture_id);
     });
 
