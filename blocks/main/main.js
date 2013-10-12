@@ -23,6 +23,10 @@ define([
             items: data.members
         };
         this.sidebar = Sidebar(content, members);
+        this.sidebar.setClickCallback(function(id){
+            radio("member-selected").broadcast(id);
+        });
+
         Detail(content, data);
 
         radio("show-member").subscribe(this.showMember.bind(this));
