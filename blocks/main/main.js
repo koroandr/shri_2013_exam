@@ -7,8 +7,9 @@ define([
     "blocks/sidebar/sidebar",
     "blocks/detail/detail",
     "blocks/about/about",
+    "blocks/lector/lector",
     "lib/radio"
-], function (html, Header, Sidebar, Detail, About, radio) {
+], function (html, Header, Sidebar, Detail, About, Lector, radio) {
     function Main(container, data) {
         if (! (this instanceof Main)) {
             return new Main(container, data);
@@ -33,12 +34,18 @@ define([
 
         this.detail = new Detail(content, data);
 
+        var lectors = {
+            items: data.lectors
+        }
+        this.lect_sidebar = new Sidebar(content, lectors);
+
         radio("show-member").subscribe(this.showMember.bind(this));
         radio("show-about").subscribe(this.showAbout.bind(this));
         radio("show-lecture").subscribe(this.showLecture.bind(this));
     }
 
     Main.prototype.showMember = function(id) {
+        this.lect_sidebar.hide();
         this.about.hide();
         this.sidebar.show();
         this.detail.show();
@@ -48,6 +55,7 @@ define([
     };
 
     Main.prototype.showAbout = function() {
+        this.lect_sidebar.hide();
         this.sidebar.hide();
         this.detail.hide();
         this.about.show();
@@ -59,6 +67,8 @@ define([
         this.about.hide();
         this.sidebar.hide();
         this.detail.hide();
+
+        this.lect_sidebar.show();
 
         this.header.showItem("lecture");
     }
