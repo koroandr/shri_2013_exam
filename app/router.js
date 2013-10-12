@@ -41,6 +41,9 @@ function (radio) {
         radio("show-about").broadcast();
     });
 
+    window.addEventListener('popstate', function(event) {
+        init();
+    });
 
     return {
         init: init
