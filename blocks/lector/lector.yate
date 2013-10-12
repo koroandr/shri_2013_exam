@@ -1,0 +1,20 @@
+module "lector"
+
+match / {
+	<div class="lector">
+		<div class="lector__info">
+			<img src="{.link_photo}" class="lector__photo"/>
+			<div class="lector__name">{.name}</div>
+			<div class="lector__about">{.about}</div>
+		</div>
+		<div class="lector__lectures">
+			for .shri2013 {
+				<div class="lector__lecture">
+					<span class="lector__lecture-name">{.name}</span>
+					<a href="{.slides_url}">Слайды</a>
+					<a href="{.video_url}">Видео</a>
+				</div>	
+			}
+		</div>
+	</div>
+}
