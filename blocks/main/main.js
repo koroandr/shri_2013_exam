@@ -6,8 +6,9 @@ define([
     "blocks/header/header",
     "blocks/sidebar/sidebar",
     "blocks/detail/detail",
+    "blocks/about/about",
     "lib/radio"
-], function (html, Header, Sidebar, Detail, radio) {
+], function (html, Header, Sidebar, Detail, About, radio) {
     function Main(container, data) {
         if (! (this instanceof Main)) {
             return new Main(container, data);
@@ -22,6 +23,9 @@ define([
         var members = {
             items: data.members
         };
+
+        this.about = new About(content, data);
+
         this.sidebar = Sidebar(content, members);
         this.sidebar.setClickCallback(function(id){
             radio("member-selected").broadcast(id);
@@ -35,6 +39,7 @@ define([
     }
 
     Main.prototype.showMember = function(id) {
+        this.about.hide();
         this.sidebar.show();
         this.detail.show();
         this.sidebar.selectItem(id);
@@ -45,11 +50,13 @@ define([
     Main.prototype.showAbout = function() {
         this.sidebar.hide();
         this.detail.hide();
+        this.about.show();
 
         this.header.showItem("about")
     };
 
     Main.prototype.showLecture = function(id) {
+        this.about.hide();
         this.sidebar.hide();
         this.detail.hide();
 

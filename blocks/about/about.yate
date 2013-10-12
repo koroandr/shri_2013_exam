@@ -1,0 +1,5 @@
+module "about"
+
+match / {
+	<div class="about">{.text}</div>
+}
