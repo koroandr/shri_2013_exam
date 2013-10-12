@@ -2,8 +2,8 @@ define(function(){
    return {
        "menu": [
            {
-            "href":"#ololo",
-            "title":"Test"
+            "link":"member",
+            "title":"Участники"
            }
        ],
        "lectures":

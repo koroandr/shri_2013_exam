@@ -12,6 +12,12 @@ define([
 
         this.container = $(container);
         this.container.append($(yr.run("header", data)));
+        this.menu = this.container.find(".header__menu");
     }
+
+    Header.prototype.showItem = function(link) {
+        this.menu.find(".selected").removeClass("selected");
+        this.menu.find('[data-link="' + link + '"]').addClass("selected");
+    };
     return Header;
 });

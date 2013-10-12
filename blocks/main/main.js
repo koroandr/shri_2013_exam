@@ -16,7 +16,7 @@ define([
         this.container = $(container);
         this.container.append(html);
 
-        Header(this.container.find(".main__header"), data);
+        this.header = Header(this.container.find(".main__header"), data);
         var content = this.container.find(".main__content");
 
         var members = {
@@ -34,7 +34,9 @@ define([
 
     Main.prototype.showMember = function(id) {
         this.sidebar.selectItem(id);
+        this.header.showItem("member");
     };
+
 
     return Main;
 });
