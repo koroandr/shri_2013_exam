@@ -39,6 +39,8 @@ define([
         }
         this.lect_sidebar = new Sidebar(content, lectors);
 
+        this.lector = new Lector(content, lectors.items[0]);
+
         radio("show-member").subscribe(this.showMember.bind(this));
         radio("show-about").subscribe(this.showAbout.bind(this));
         radio("show-lecture").subscribe(this.showLecture.bind(this));
@@ -46,6 +48,7 @@ define([
 
     Main.prototype.showMember = function(id) {
         this.lect_sidebar.hide();
+        this.lector.hide();
         this.about.hide();
         this.sidebar.show();
         this.detail.show();
@@ -56,6 +59,7 @@ define([
 
     Main.prototype.showAbout = function() {
         this.lect_sidebar.hide();
+        this.lector.hide();
         this.sidebar.hide();
         this.detail.hide();
         this.about.show();
@@ -69,6 +73,7 @@ define([
         this.detail.hide();
 
         this.lect_sidebar.show();
+        this.lector.show();
 
         this.header.showItem("lecture");
     }
