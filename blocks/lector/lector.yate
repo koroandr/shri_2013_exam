@@ -11,7 +11,7 @@ match / {
 }
 
 match .data {
-    <img src="http://{.link_photo}" class="lector__photo"/>
+    <img src="{.link_photo}" class="lector__photo"/>
             <div class="lector__name">{.name}</div>
             <div class="lector__about">{.about}</div>
             <div style="clear:both;"></div>

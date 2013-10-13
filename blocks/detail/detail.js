@@ -21,6 +21,11 @@ define([
     }
 
     Detail.prototype.showMember = function(member_id) {
+        if (member_id == null) {
+            this.detail.html("");
+            return;
+        }
+
         var member;
         for (var i = 0; i < this.members.length; i++) {
             if (this.members[i].id == member_id) {
@@ -28,7 +33,22 @@ define([
                 break;
             }
         }
+
+        member.paragraphs = member.about.split("\n");
         this.detail.html(yr.run("detail", {data: member}));
+        var about = this.body.find(".detail__about");
+        about.hide();
+        var image = this.body.find(".detail__photo");
+
+
+        image.load(function(){
+            if (about.height() + image.height() > 300) {
+                about.height(500 - image.height() - 60);
+            }
+            about.show();
+        });
+
+
     };
 
     Detail.prototype.show = function() {

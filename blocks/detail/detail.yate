@@ -9,15 +9,27 @@ if .data {
 }
 
 match .data {
-    <img class="detail__photo" src="http://{.link_photo}"/>
+    <img class="detail__photo" src="{.link_photo}"/>
                                     <div class="detail__info">
                                         <span class="detail__name">{.name}</span><br/>
                                         <span class="detail__city">{.city}</span><br/>
-                                        <a class="detail__link-facebook detail__icon" href="http://{.link_facebook}">f</a>
-                                        <a class="detail__link-vk detail__icon" href="http://{.link_vk}">В</a>
-                                        <!--<a class="detail__link-github" href="http://{.link_github}">gh</a>-->
-                                        <a class="detail__link-yaru detail__icon" href="http://{.link_yaru}">Я</a>
+                                        if .link_facebook != "" {
+                                            <a class="detail__link-facebook detail__icon" href="{.link_facebook}"></a>
+                                        }
+                                        if .link_vk != "" {
+                                            <a class="detail__link-vk detail__icon" href="{.link_vk}"></a>
+                                        }
+                                        if .link_github != "" {
+                                            <a class="detail__link-github detail__icon" href="{.link_github}"></a>
+                                        }
+                                        if .link_yaru != "" {
+                                            <a class="detail__link-yaru detail__icon" href="{.link_yaru}"></a>
+                                        }
                                     </div>
                                     <div style="clear: both"></div>
-                                    <div class="detail__about">{.about}</div>
+                                    <div class="detail__about">
+                                    for .paragraphs {
+                                        <p>{.}</p>
+                                    }
+                                    </div>
 }
