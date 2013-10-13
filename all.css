@@ -187,7 +187,8 @@ body {
     margin-top: 20px;
     overflow: scroll;
     border: solid 1px #ccc;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
 

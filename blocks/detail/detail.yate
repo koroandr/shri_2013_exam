@@ -19,5 +19,9 @@ match .data {
                                         <a class="detail__link-yaru detail__icon" href="{.link_yaru}"></a>
                                     </div>
                                     <div style="clear: both"></div>
-                                    <div class="detail__about">{.about}</div>
+                                    <div class="detail__about">
+                                    for .paragraphs {
+                                        <p>{.}</p>
+                                    }
+                                    </div>
 }

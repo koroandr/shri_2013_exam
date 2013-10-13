@@ -28,6 +28,8 @@ define([
                 break;
             }
         }
+
+        member.paragraphs = member.about.split("\n");
         this.detail.html(yr.run("detail", {data: member}));
         var about = this.body.find(".detail__about");
         about.hide();
@@ -36,7 +38,7 @@ define([
 
         image.load(function(){
             if (about.height() + image.height() > 300) {
-                about.height(500 - image.height() - 80);
+                about.height(500 - image.height() - 60);
             }
             about.show();
         });
