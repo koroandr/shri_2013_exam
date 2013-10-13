@@ -21,6 +21,11 @@ define([
     }
 
     Detail.prototype.showMember = function(member_id) {
+        if (member_id == null) {
+            this.detail.html("");
+            return;
+        }
+
         var member;
         for (var i = 0; i < this.members.length; i++) {
             if (this.members[i].id == member_id) {
