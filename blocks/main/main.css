@@ -1,0 +1,20 @@
+.main {
+    background: #fefefe;
+    width: 800px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px #ccc;
+    border-bottom:  solid 1px #aaa;
+
+    /*box-shadow: 0 0 40px 10px;*/
+}
+
+.main__header {
+    max-height: 100px;
+    /*border-bottom: solid 1px #999;*/
+}
+
+.main__content {
+    height: 500px;
+}

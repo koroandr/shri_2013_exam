@@ -2,8 +2,13 @@
  * Created by koroandr on 12.10.13.
  */
 define([
-    "lib/radio"
-],function (radio) {
+    "lib/radio",
+    "text!blocks/header/header.css"
+],function (radio, css) {
+    $('<style type="text/css"></style>')
+        .html(css)
+        .appendTo("head");
+
     function Header(container, data) {
         if (!(this instanceof Header)) {
             return new Header(container, data);

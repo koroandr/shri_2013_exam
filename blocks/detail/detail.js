@@ -3,8 +3,13 @@
  */
 
 define([
-    "lib/radio"
-],function(radio) {
+    "lib/radio",
+    "text!blocks/detail/detail.css"
+],function(radio, css) {
+    $('<style type="text/css"></style>')
+        .html(css)
+        .appendTo("head");
+
     function Detail(container, data) {
         if(!(this instanceof Detail)) {
             return new Detail(container, data);

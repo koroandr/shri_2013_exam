@@ -1,0 +1,38 @@
+.header {
+    padding-top: 20px;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header__menu {
+    display: block;
+    margin: auto auto 0;
+    text-align: center;
+    padding: 0;
+}
+
+.header__menu-link {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.header__menu-link a {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #7ac;
+    text-decoration: none;
+    font-size: 1.8em;
+    border-bottom: 2px solid #77aacc;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.header__menu-link:hover a {
+    color: #c77;
+    border-bottom: 2px solid #c77;
+}
+
+
+.header__menu-link.selected a {
+    color: #c77;
+    border-bottom: 3px solid #c77;
+}
