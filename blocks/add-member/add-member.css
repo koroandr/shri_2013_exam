@@ -1,3 +1,65 @@
 .add-member {
+    padding-top: 10px;
+    padding-left: 40px;
+    display: block;
+    float: left;
+}
 
+.add-member__row {
+    display: block;
+    /*padding-left: 50px;*/
+    /*clear: both;*/
+    height: 40px;
+}
+
+.add-member label {
+    display: block;
+    float: left;
+    text-align: right;
+    padding-top: 5px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.add-member span {
+    margin-left: 140px;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.add-member form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /*display: block;*/
+}
+.add-member input {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    height: 20px;
+    width: 200px;
+    font-size: 16px;
+    /*clear: both;*/
+}
+
+.add-member__add {
+    margin-left: 180px;
+    color: #7ac;
+    border-bottom: solid 1px #7ac;
+}
+.add-member__add:hover {
+    cursor: pointer;
+    color: #58a;
+}
+
+.add-member__cancel {
+    margin-left: 20px;
+    color: #c77;
+    border-bottom: 1px solid #c77;
+}
+
+.add-member__cancel:hover {
+    cursor: pointer;
+    color: #a55;
 }
