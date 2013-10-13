@@ -50,6 +50,8 @@ define(
 
         Sidebar.prototype.hide = function() {
             this.body.hide();
+            this.filter_input.val("");
+            this.filter();
         };
 
         Sidebar.prototype.filter = function() {
