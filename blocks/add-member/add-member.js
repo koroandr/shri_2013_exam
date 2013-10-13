@@ -26,7 +26,28 @@ define([
     }
 
     AddMember.prototype.doAdd = function() {
-        radio("add-member").broadcast();
+        var last_id = this.data.members[this.data.members.length - 1].id;
+
+        var new_member = {
+            id: last_id + 1
+        };
+
+        var inputs = this.body.find("input");
+
+        for (var i = inputs.length - 1; i >= 0; i--) {
+            var input = $(inputs[i]);
+            new_member[input.attr("name")] = input.val();
+        }
+
+        console.log(new_member);
+
+        this.data.members.push(new_member);
+
+        if (localStorage) {
+            localStorage.setItem("data", JSON.stringify(this.data));
+        }
+
+        radio("add-member").broadcast(new_member.id);
     };
 
     AddMember.prototype.show = function() {
@@ -34,6 +55,7 @@ define([
     };
 
     AddMember.prototype.hide = function() {
+        this.body.find("input").val("");
         this.body.hide();
     };
 
