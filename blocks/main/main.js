@@ -38,6 +38,7 @@ define([
         this.lect_sidebar && this.lect_sidebar.hide();
         this.lector && this.lector.hide();
         this.about && this.about.hide();
+        this.add_link && this.add_link.show();
 
         //Если раздела нет, то подгружаем его отдельно.
         if (this.sidebar == null || this.detail == null) {
@@ -101,6 +102,8 @@ define([
         this.lector && this.lector.hide();
         this.sidebar && this.sidebar.hide();
         this.detail && this.detail.hide();
+        this.add_member && this.add_member.hide();
+        this.add_link.hide();
 
         if (this.about == null) {
             var self = this;
@@ -124,6 +127,8 @@ define([
         this.about && this.about.hide();
         this.sidebar && this.sidebar.hide();
         this.detail && this.detail.hide();
+        this.add_member && this.add_member.hide();
+        this.add_link.hide();
 
         if (this.lect_sidebar == null || this.lector == null) {
             var self = this;
