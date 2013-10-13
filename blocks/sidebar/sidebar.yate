@@ -4,7 +4,7 @@ match / {
     <div class="sidebar">
         for .items {
             <a data-id="{.id}" class="sidebar__item">
-                <img class="sidebar__photo" src="http://{.link_photo}"/>
+                <img class="sidebar__photo" src="{.link_photo}"/>
                 <span class="sidebar__name">{.name}</span>
             </a>
         }

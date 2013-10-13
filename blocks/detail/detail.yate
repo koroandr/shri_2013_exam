@@ -9,14 +9,14 @@ if .data {
 }
 
 match .data {
-    <img class="detail__photo" src="http://{.link_photo}"/>
+    <img class="detail__photo" src="{.link_photo}"/>
                                     <div class="detail__info">
                                         <span class="detail__name">{.name}</span><br/>
                                         <span class="detail__city">{.city}</span><br/>
-                                        <a class="detail__link-facebook detail__icon" href="http://{.link_facebook}"></a>
-                                        <a class="detail__link-vk detail__icon" href="http://{.link_vk}"></a>
-                                        <a class="detail__link-github detail__icon" href="http://{.link_github}"></a>
-                                        <a class="detail__link-yaru detail__icon" href="http://{.link_yaru}"></a>
+                                        <a class="detail__link-facebook detail__icon" href="{.link_facebook}"></a>
+                                        <a class="detail__link-vk detail__icon" href="{.link_vk}"></a>
+                                        <a class="detail__link-github detail__icon" href="{.link_github}"></a>
+                                        <a class="detail__link-yaru detail__icon" href="{.link_yaru}"></a>
                                     </div>
                                     <div style="clear: both"></div>
                                     <div class="detail__about">{.about}</div>
