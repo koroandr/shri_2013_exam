@@ -38,8 +38,11 @@ define([
             items: data.lectors
         }
         this.lect_sidebar = new Sidebar(content, lectors);
+        this.lect_sidebar.setClickCallback(function(id){
+            radio("lecture-selected").broadcast(id);
+        });
 
-        this.lector = new Lector(content, lectors.items[0]);
+        this.lector = new Lector(content, data);
 
         radio("show-member").subscribe(this.showMember.bind(this));
         radio("show-about").subscribe(this.showAbout.bind(this));
@@ -50,8 +53,10 @@ define([
         this.lect_sidebar.hide();
         this.lector.hide();
         this.about.hide();
+
         this.sidebar.show();
         this.detail.show();
+
         this.sidebar.selectItem(id);
 
         this.header.showItem("member");
@@ -62,6 +67,7 @@ define([
         this.lector.hide();
         this.sidebar.hide();
         this.detail.hide();
+
         this.about.show();
 
         this.header.showItem("about")
@@ -74,6 +80,8 @@ define([
 
         this.lect_sidebar.show();
         this.lector.show();
+
+        this.lect_sidebar.selectItem(id);
 
         this.header.showItem("lecture");
     }
