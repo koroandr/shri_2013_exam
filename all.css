@@ -177,6 +177,8 @@ body {
     display: block;
     float: left;
     width: 200px;
+    min-height: 100px;
+    margin-right: 20px;
 }
 
 .lector__name {
