@@ -2,12 +2,22 @@ module "sidebar"
 
 match / {
     <div class="sidebar">
-        for .items {
-            <a data-id="{.id}" class="sidebar__item">
-                <img class="sidebar__photo" src="http://{.link_photo}"/>
-                <span class="sidebar__name">{.name}</span>
-            </a>
-        }
+        <div class="sidebar__filter">
+            <input class="sidebar__filter-input" type="text" placeholder="Поиск по имени"/>
+        </div>
+        <div class="sidebar__items">
+            for .items {
+                        apply .
+                    }
+        </div>
+
         <div style="clear: both"></div>
     </div>
+}
+
+match .items {
+    <a data-id="{.id}" class="sidebar__item">
+                    <img class="sidebar__photo" src="http://{.link_photo}"/>
+                    <span class="sidebar__name">{.name}</span>
+                </a>
 }
