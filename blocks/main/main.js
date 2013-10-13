@@ -8,8 +8,13 @@ define([
     "blocks/detail/detail",
     "blocks/about/about",
     "blocks/lector/lector",
-    "lib/radio"
-], function (html, Header, Sidebar, Detail, About, Lector, radio) {
+    "lib/radio",
+    "text!blocks/main/main.css"
+], function (html, Header, Sidebar, Detail, About, Lector, radio, css) {
+    $('<style type="text/css"></style>')
+        .html(css)
+        .appendTo("head");
+
     function Main(container, data) {
         if (! (this instanceof Main)) {
             return new Main(container, data);

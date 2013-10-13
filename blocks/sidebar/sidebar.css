@@ -1,0 +1,60 @@
+.sidebar {
+    display: block;
+    float:left;
+    width: 200px;
+    height: 500px;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar__filter {
+    display: block;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar__filter-input {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 174px;
+    height: 18px;
+    font-size: 13px;
+}
+
+.sidebar__items {
+    height: 460px;
+    overflow: scroll;
+}
+
+.sidebar__item {
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    cursor: pointer;
+}
+.sidebar__item:hover {
+    background: #f9fcfe;
+}
+
+.sidebar__item.selected {
+    background: #9ce;
+}
+
+.sidebar__photo {
+    display:block;
+    float:left;
+    height: 40px;
+    width: 40px;
+    padding-top: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.sidebar__name {
+    display: block;
+    float: left;
+    font-size: 13px;
+    margin-left: 6px;
+    padding-top: 16px;
+}

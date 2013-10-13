@@ -1,7 +1,14 @@
 /**
  * Created by koroandr on 13.10.13.
  */
-define(function () {
+define(
+["text!blocks/about/about.css"],
+function (css) {
+
+    $('<style type="text/css"></style>')
+    .html(css)
+    .appendTo("head");
+
     function About(container, data) {
         if (!(this instanceof About)) {
             return new About(container, data);

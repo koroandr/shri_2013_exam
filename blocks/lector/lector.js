@@ -3,8 +3,13 @@
  */
 
 define([
-    "lib/radio"
-],function(radio){
+    "lib/radio",
+    "text!blocks/lector/lector.css"
+],function(radio, css){
+    $('<style type="text/css"></style>')
+        .html(css)
+        .appendTo("head");
+
     function Lectors(container, data) {
         this.container = $(container);
 
