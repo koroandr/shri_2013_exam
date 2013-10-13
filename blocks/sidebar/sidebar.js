@@ -54,6 +54,8 @@ define(
 
         Sidebar.prototype.filter = function() {
             var matchName = function(input, text) {
+                input = input.toLowerCase();
+                text = text.toLowerCase();
                 if (text.indexOf(input) == 0) {
                     return true;
                 }
