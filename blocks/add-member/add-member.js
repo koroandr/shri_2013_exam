@@ -47,7 +47,7 @@ define([
             localStorage.setItem("data", JSON.stringify(this.data));
         }
 
-        radio("add-member").broadcast(new_member.id);
+        radio("add-member").broadcast(new_member);
     };
 
     AddMember.prototype.show = function() {

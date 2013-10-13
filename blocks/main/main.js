@@ -91,10 +91,18 @@ define([
         this.add_member.show();
     };
 
-    Main.prototype.addMember = function(id) {
+    Main.prototype.addMember = function(member) {
         this.add_member.hide();
         this.add_link.show();
         this.detail.show();
+
+        if (member) {
+            var data = {
+                partial: true,
+                items: [member]
+            };
+            this.sidebar.addItems(data);
+        }
     };
 
     Main.prototype.showAbout = function() {

@@ -1,6 +1,11 @@
 module "sidebar"
 
 match / {
+if .partial {
+    for .items {
+        apply .
+    }
+} else {
     <div class="sidebar">
         <div class="sidebar__filter">
             <input class="sidebar__filter-input" type="text" placeholder="Поиск по имени"/>
@@ -14,10 +19,15 @@ match / {
         <div style="clear: both"></div>
     </div>
 }
+}
 
 match .items {
     <a data-id="{.id}" class="sidebar__item">
-                    <img class="sidebar__photo" src="{.link_photo}"/>
-                    <span class="sidebar__name">{.name}</span>
-                </a>
+    if .link_photo != "" {
+        <img class="sidebar__photo" src="{.link_photo}"/>
+    } else {
+        <img class="sidebar__photo" src="images/anon.png"/>
+    }
+        <span class="sidebar__name">{.name}</span>
+    </a>
 }
