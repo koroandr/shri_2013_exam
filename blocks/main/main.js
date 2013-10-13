@@ -16,7 +16,6 @@ define([
         if (! (this instanceof Main)) {
             return new Main(container, data);
         }
-
         this.data = data;
 
         this.container = $(container);
@@ -25,15 +24,21 @@ define([
         this.header = Header(this.container.find(".main__header"), data);
         this.content = this.container.find(".main__content");
 
+        this.add_link = this.container.find(".main__add-link");
+
+        this.add_link.find("a").click(this.showAddForm.bind(this));
+
         radio("show-member").subscribe(this.showMember.bind(this));
         radio("show-about").subscribe(this.showAbout.bind(this));
         radio("show-lecture").subscribe(this.showLecture.bind(this));
+        radio("add-member").subscribe(this.addMember.bind(this));
     }
 
     Main.prototype.showMember = function(id) {
         this.lect_sidebar && this.lect_sidebar.hide();
         this.lector && this.lector.hide();
         this.about && this.about.hide();
+        this.add_link && this.add_link.show();
 
         //Если раздела нет, то подгружаем его отдельно.
         if (this.sidebar == null || this.detail == null) {
@@ -67,11 +72,46 @@ define([
         this.header.showItem("member");
     };
 
+    Main.prototype.showAddForm = function() {
+        this.add_link.hide();
+        this.detail.hide();
+
+        var self = this;
+
+        if (this.add_member == null) {
+            require([
+                "blocks/add-member/add-member"
+            ], function(AddMember) {
+                self.add_member = new AddMember(self.content, self.data);
+                self.showAddForm();
+            });
+            return;
+        }
+
+        this.add_member.show();
+    };
+
+    Main.prototype.addMember = function(member) {
+        this.add_member.hide();
+        this.add_link.show();
+        this.detail.show();
+
+        if (member) {
+            var data = {
+                partial: true,
+                items: [member]
+            };
+            this.sidebar.addItems(data);
+        }
+    };
+
     Main.prototype.showAbout = function() {
         this.lect_sidebar && this.lect_sidebar.hide();
         this.lector && this.lector.hide();
         this.sidebar && this.sidebar.hide();
         this.detail && this.detail.hide();
+        this.add_member && this.add_member.hide();
+        this.add_link.hide();
 
         if (this.about == null) {
             var self = this;
@@ -95,6 +135,8 @@ define([
         this.about && this.about.hide();
         this.sidebar && this.sidebar.hide();
         this.detail && this.detail.hide();
+        this.add_member && this.add_member.hide();
+        this.add_link.hide();
 
         if (this.lect_sidebar == null || this.lector == null) {
             var self = this;

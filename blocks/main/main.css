@@ -16,5 +16,25 @@
 }
 
 .main__content {
+    position: relative;
     height: 500px;
+}
+
+.main__add-link {
+    position: absolute;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 5px;
+    right: 0;
+    top: 0;
+}
+
+.main__add-link a {
+    cursor: pointer;
+    font-size: 0.8em;
+    color: #7ac;
+}
+
+.main__add-link a:hover {
+    color: #c77;
 }

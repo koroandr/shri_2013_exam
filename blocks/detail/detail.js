@@ -45,13 +45,22 @@ define([
         about.hide();
         var image = this.body.find(".detail__photo");
 
-
-        image.load(function(){
-            if (about.height() + image.height() > 300) {
-                about.height(500 - image.height() - 60);
-            }
+        if (image.length > 0) {
+            var onload = function() {
+                if (about.height() + image.height() > 300) {
+                    about.height(500 - image.height() - 60);
+                }
+                about.show();
+            };
+            image.load(onload);
+            setTimeout(function(){
+                about.show()
+            }, 2000);
+        } else {
             about.show();
-        });
+        }
+
+
 
 
     };

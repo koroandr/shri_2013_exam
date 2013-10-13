@@ -94,6 +94,17 @@ define(
 
         };
 
+        Sidebar.prototype.addItems = function(data) {
+            var newItems = $(yr.run("sidebar", data));
+            var self = this;
+            newItems.click(function(){
+                if (self.clickCallback) {
+                    self.clickCallback($(this).data("id"));
+                }
+            })
+            this.body.find(".sidebar__items").append(newItems);
+        };
+
 
         return Sidebar;
 });
