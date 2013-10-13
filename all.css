@@ -93,7 +93,7 @@ body {
     float:left;
     height: 40px;
     width: 40px;
-    padding-top: 5px;
+    margin-top: 5px;
     margin-left: 10px;
     border-radius: 50%;
 }
