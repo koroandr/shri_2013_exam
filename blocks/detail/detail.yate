@@ -13,10 +13,10 @@ match .data {
                                     <div class="detail__info">
                                         <span class="detail__name">{.name}</span><br/>
                                         <span class="detail__city">{.city}</span><br/>
-                                        <a class="detail__link-facebook detail__icon" href="http://{.link_facebook}">f</a>
-                                        <a class="detail__link-vk detail__icon" href="http://{.link_vk}">В</a>
-                                        <!--<a class="detail__link-github" href="http://{.link_github}">gh</a>-->
-                                        <a class="detail__link-yaru detail__icon" href="http://{.link_yaru}">Я</a>
+                                        <a class="detail__link-facebook detail__icon" href="http://{.link_facebook}"></a>
+                                        <a class="detail__link-vk detail__icon" href="http://{.link_vk}"></a>
+                                        <a class="detail__link-github detail__icon" href="http://{.link_github}"></a>
+                                        <a class="detail__link-yaru detail__icon" href="http://{.link_yaru}"></a>
                                     </div>
                                     <div style="clear: both"></div>
                                     <div class="detail__about">{.about}</div>
