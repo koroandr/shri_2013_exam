@@ -112,6 +112,7 @@ body {
     /*width: 100%;*/
     padding: 20px;
     width: 559px;
+    height: 460px;
 }
 
 
@@ -184,6 +185,10 @@ body {
 .detail__about {
     display: block;
     margin-top: 20px;
+    overflow: scroll;
+    border: solid 1px #ccc;
+    padding: 10px;
+
 }
 
 .about {

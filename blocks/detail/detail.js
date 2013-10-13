@@ -29,6 +29,19 @@ define([
             }
         }
         this.detail.html(yr.run("detail", {data: member}));
+        var about = this.body.find(".detail__about");
+        about.hide();
+        var image = this.body.find(".detail__photo");
+
+
+        image.load(function(){
+            if (about.height() + image.height() > 300) {
+                about.height(500 - image.height() - 80);
+            }
+            about.show();
+        });
+
+
     };
 
     Detail.prototype.show = function() {
