@@ -1,0 +1,51 @@
+.lector {
+    float:left;
+    padding: 20px;
+    width: 559px;
+}
+
+.lector__photo {
+    display: block;
+    float: left;
+    width: 200px;
+    min-height: 100px;
+    margin-right: 20px;
+}
+
+.lector__name {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.lector__about {
+    color: #777;
+}
+
+.lector__caption {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.lector__lectures {
+    margin-top: 10px;
+    border-bottom: solid 1px #ddd;
+}
+
+.lector__lecture {
+    border-top: solid 1px #ddd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.lector__lecture a {
+    font-size: 0.8em;
+    float: right;
+    margin-left: 10px;
+    color: #7ac;
+}
+
+.lector__lecture a:hover {
+    color: #c77;
+}

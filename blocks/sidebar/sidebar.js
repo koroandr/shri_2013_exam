@@ -4,8 +4,13 @@
 
 define(
     [
+        "text!blocks/sidebar/sidebar.css"
     ],
-    function() {
+    function(css) {
+        $('<style type="text/css"></style>')
+            .html(css)
+            .appendTo("head");
+
         function Sidebar(container, data) {
             if (!(this instanceof Sidebar)) {
                 return new Sidebar(container, data)
