@@ -76,7 +76,7 @@
 .detail__about {
     display: block;
     margin-top: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     border: solid 1px #ccc;
     padding-left: 10px;
     padding-right: 10px;
